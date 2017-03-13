@@ -1,5 +1,5 @@
 <?php
-	$sendto   = "sales@sinocar.ru";
+	$sendto   = "potap_92@mail.ru";
 	
 	if(isset($_POST['hidden'])){
 		$hidden = $_POST['hidden'];
@@ -68,10 +68,11 @@
 	// Формирование тела письма
 	$msg .= "<p><strong>Имя: </strong> ".$name."</p>\r\n";
 	$msg .= "<p><strong>Телефон: </strong> ".$phone."</p>\r\n";
+	$msg .= "<p><strong>E-Mail: </strong> ".$email."</p>\r\n";
 	$msg .= "</body></html>";
 	}
 
-$link='https://optom.envycrm.com/crm/api/v1/lead/set/?api_key=fd3b5bee1587e3d9dc2d15e2b9e000a423fb0d16';
+//$link='https://optom.envycrm.com/crm/api/v1/lead/set/?api_key=fd3b5bee1587e3d9dc2d15e2b9e000a423fb0d16';
 $curl=curl_init();
 $data=array(
 'method' => 'create',
@@ -106,3 +107,4 @@ curl_close($curl);
 		echo "true";
 	}
 ?>
+
